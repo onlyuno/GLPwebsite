@@ -3,23 +3,69 @@
     <head>
         <title>You are looking for...</title>
         <meta charest="utf-8">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1><a href="index.html">You are looking for...</a></h1>
-        <div id="grid">
-            <div class="right-line">
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        var border = document.querySelector('nav');
+        if(this.value == 'night'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            border.style.borderColor='white';
+            this.value='day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i<alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'white';
+                i = i + 1;
+            }
+        } else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            border.style.borderColor='black';
+            this.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'black';
+                i = i + 1;
+            }
+        }
+        ">
+        <header class="main-title"><a href="main.html">You are looking for...</a></header>
+        <nav id="nav_title">
+            <div class="nav_letter">
                 <a href="history.html">HISTORY</a>
             </div>
-            <div class="right-line">
+            <div class="nav_letter">
                 <a href="science.html">SCIENCE/IT</a>
             </div>
-            <div class="right-line">
+            <div class="nav_letter">
                 <a href="politics.html">POLITICS</a>
             </div>
-            <div>
+            <div class="nav_letter">
                 <a href="economy.html">ECONOMY</a>
             </div>
-        </div>
+        </nav>
+        <main>
+            <a class="main_title">Science</a>
+            <ol>
+                <li>한국과학기술정보연구원
+                    <p><a class="website" href="https://www.kisti.re.kr/">한국과학기술정보연구원</a>은...</p>
+                </li>
+                <li>국가과학기술지식정보서비스
+                    <p><a class="website" href="https://www.ntis.go.kr/ThMain.do">국가과학기술지식정보서비스</a>는...</p>
+                </li>
+                <li>과학기술정보통신부
+                    <p><a class="website" href="https://www.msit.go.kr/bbs/list.do?mPid=74&mId=99">과학기술정보통신부</a>는...</p>
+                </li>
+            </ol>
+        </main>
     </body>
 </html>

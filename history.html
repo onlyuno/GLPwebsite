@@ -3,35 +3,75 @@
     <head>
         <title>You are looking for...</title>
         <meta charest="utf-8">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 class="main-title"><a href="index.html">You are looking for...</a></h1>
-        <div id="grid">
-            <div class="right-line">
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        var border = document.querySelector('nav');
+        if(this.value == 'night'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            border.style.borderColor='white';
+            this.value='day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i<alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'white';
+                i = i + 1;
+            }
+        } else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            border.style.borderColor='black';
+            this.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'black';
+                i = i + 1;
+            }
+        }
+        ">
+        <header class="main-title"><a href="main.html">You are looking for...</a></header>
+        <nav id="nav_title">
+            <div class="nav_letter">
                 <a href="history.html">HISTORY</a>
             </div>
-            <div class="right-line">
+            <div class="nav_letter">
                 <a href="science.html">SCIENCE/IT</a>
             </div>
-            <div class="right-line">
+            <div class="nav_letter">
                 <a href="politics.html">POLITICS</a>
             </div>
-            <div>
+            <div class="nav_letter">
                 <a href="economy.html">ECONOMY</a>
             </div>
-        </div>
-        <h1>History</h1>
-        <ol>
-            <li>한국민족문화대백과사전
-                <p><a class="website" href="https://encykorea.aks.ac.kr/">한국민족문화대백과전</a>은...</p>
-            </li>
-            <li>국사편찬위원회
-                <p><a class="website" href="https://www.history.go.kr/">국사편찬위원회</a>는...</p>
-            </li>
-            <li>한국사데이터베이스
-                <p><a class="website" href="https://db.history.go.kr/">한국사데이터베이스</a>는...</p>
-            </li>
-        </ol>
+        </nav>
+        <main>
+            <a class="main_title">History</a>
+            <ol>
+                <li>한국민족문화대백과사전
+                    <p><a class="website" href="https://encykorea.aks.ac.kr/">한국민족문화대백과전</a>은...</p>
+                </li>
+                <li>국사편찬위원회
+                    <p><a class="website" href="https://www.history.go.kr/">국사편찬위원회</a>는...</p>
+                </li>
+                <li>한국사데이터베이스
+                    <p><a class="website" href="https://db.history.go.kr/">한국사데이터베이스</a>는...</p>
+                </li>
+                <li>우리역사넷
+                    <p><a class="website" href="http://contents.history.go.kr/front">우리역사넷</a>은...</p>
+                </li>
+                <li>National Museum of African American History and Culture
+                    <p><a class="website" href="https://nmaahc.si.edu/">National Museum of African American History and Culture</a>은...</p>
+                </li>
+            </ol>
+        </main> 
     </body>
 </html>

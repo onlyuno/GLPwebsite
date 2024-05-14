@@ -3,23 +3,84 @@
     <head>
         <title>You are looking for...</title>
         <meta charest="utf-8">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1><a href="index.html">You are looking for...</a></h1>
-        <div id="grid">
-            <div class="right-line">
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        var border = document.querySelector('nav');
+        if(this.value == 'night'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            border.style.borderColor='white';
+            this.value='day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i<alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'white';
+                i = i + 1;
+            }
+        } else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            border.style.borderColor='black';
+            this.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'black';
+                i = i + 1;
+            }
+        }
+        ">
+        <header class="main-title"><a href="main.html">You are looking for...</a></header>
+        <nav id="nav_title">
+            <div class="nav_letter">
                 <a href="history.html">HISTORY</a>
             </div>
-            <div class="right-line">
+            <div class="nav_letter">
                 <a href="science.html">SCIENCE/IT</a>
             </div>
-            <div class="right-line">
+            <div class="nav_letter">
                 <a href="politics.html">POLITICS</a>
             </div>
-            <div>
+            <div class="nav_letter">
                 <a href="economy.html">ECONOMY</a>
             </div>
-        </div>
+        </nav>
+        <main>
+            <a class="main_title">Economy</a>
+            <ol>
+                <li>Kotra 해외시장뉴스
+                    <p><a class="website" href="https://dream.kotra.or.kr/kotranews/index.do">Kotra 해외시장뉴스</a>는...</p>
+                </li>
+                <li>KIEP 대외경제정책연구원
+                    <p><a class="website" href="https://www.kiep.go.kr/">KIEP 대외경제정책연구원</a>은...</p>
+                </li>
+                <li>한국무역협회
+                    <p><a class="website" href="https://www.kita.net/">한국무역협회</a>는...</p>
+                </li>
+                <li>KDI 한국개발연구원
+                    <p><a class="website" href="https://www.kdi.re.kr/">KDI 한국개발연구원</a>은...</p>
+                </li>
+                <li>국제통화기금 IMF
+                    <p><a class="website" href="https://www.imf.org/en/Publications">국제통화기금 IMF</a>는...</p>
+                </li>
+                <li>국제금융센터
+                    <p><a class="website" href="https://www.kcif.or.kr/">국제금융센터</a>는...</p>
+                </li>
+                <li>한국은행 경제교육
+                    <p><a class="website" href="https://www.bok.or.kr/portal/main/main.do">한국은행 경제교육</a>은...</p>
+                </li>
+                <li>WTO
+                    <p><a class="website" href="https://www.wto.org/">WTO</a>는...</p>
+                </li>
+            </ol>
+        </main>
     </body>
 </html>

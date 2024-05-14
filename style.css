@@ -1,47 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
-    h1, .main-title{
+    header a, .main_title{
         font-family:"Micro 5", sans-serif;
     }
-@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Rakkas&display=swap');
-    div{
-        font-family: "Rakkas", serif;
-    }
 /*@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Micro+5&family=Rakkas&display=swap');
-    h1, .main-title{
+    h1, header a{
         font-family: "Chakra Petch", sans-serif;
     }*/
-.main-title{
+
+/*----header----*/
+header{
     text-align:center;
-    font-size:60px;
-    padding-bottom:20px;
+    padding: 5vh;
 }
-#grid{
+header a{
+    font-size: 7vh;
+    font-size: 7vw;
+    text-decoration:none;
+    color:black;
+}
+
+/*----nav----*/
+#nav_title{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(4, 1fr);
     text-align:center;
     border-top:1px solid black;
     border-bottom:1px solid black;
     padding-top:10px;
     padding-bottom:10px;
 }
-.right-line{
-    border-right:1px solid black;
-}
-a{
+.nav_letter a{
     text-decoration:none;
     color:black;
+    font-size:2.5vh
 }
-h1{
-    padding-left:50px;
-    padding-top:30px;
-    font-size:40px;
+
+/*----main----*/
+main{
+    margin: 7vw 0 0 5vh;
+    margin-top: 30px;
+}
+.main_title{
+    font-size: 50px;
 }
 li{
-    padding:20px 5px;
-    margin-left:30px;
+    padding: 0 0 20px 20px;
 }
 .website{
     text-decoration:none;
-    color:blue;
+    color: black;
 }
 /*padding:양옆, 위아래*/
