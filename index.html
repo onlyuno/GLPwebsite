@@ -6,38 +6,9 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
+    <script src="day_and_night.js"></script>
     <body>
-        <input type="button" value="night" onclick="
-        var target = document.querySelector('body');
-        var border = document.querySelector('nav');
-        if(this.value == 'night'){
-            target.style.backgroundColor='black';
-            target.style.color='white';
-            border.style.borderColor='white';
-            this.value='day';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i<alist.length){
-                console.log(alist[i]);
-                alist[i].style.color = 'white';
-                i = i + 1;
-            }
-        } else{
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            border.style.borderColor='black';
-            this.value = 'night';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i < alist.length){
-                console.log(alist[i]);
-                alist[i].style.color = 'black';
-                i = i + 1;
-            }
-        }
-        ">
+        <input id="day_night" type="button" value="night" onclick='day_and_night()'>
         <header class="main-title"><a href="index.html">You are looking for...</a></header>    
         <nav id="nav_title">
             <div class="nav_letter">
@@ -55,23 +26,39 @@
         </nav>
         <main>
             <a class="main_title">Home</a>
-            <ol>
-                <li>DBpia
-                    <p><a class="website" href="https://www.dbpia.co.kr/">DBpia</a>는...</p>
+            <ul class="accordion">
+                <li>
+                    <input type="checkbox" id="answer01">
+                    <label for="answer01">DBpia</label>
+                    <div class="content">
+                        <p>DBpia는 국내 최대 학술 데이터베이스 브랜드로 총 3,992,565편의 논문을 서비스하고 있습니다. 매월 신규논문을 업데이트 하며 논문은 인문학, 사회과학, 자연과학, 공학, 의약학, 농수해양학, 예술체육, 복합학의 8개 분야로 분류 되어있습니다.</p>
+                    </div>
                 </li>
-                <li>KRpia
-                    <p><a class="website" href="https://www.krpia.co.kr/">KRpia</a>는...</p>
+                <li><input type="checkbox" id="answer02">
+                    <label for="answer02">KRpia</label>
+                    <div class="content">
+                        <p>KRpia는 한국학 고전DB, 인문교양 콘텐츠, 건축전공 필독서, 문학전공 필독서 등 1,840여 종의 전공/교양 콘텐츠를 이용할 수 있습니다.</p>
+                    </div>
                 </li>
-                <li>RISS
-                    <p><a class="website" href="https://www.riss.kr/index.do">RISS</a>는...</p>
+                <li><input type="checkbox" id="answer03">
+                    <label for="answer03">RISS</label>
+                    <div class="content">
+                        <p>RISS는 한국교육학술정보원에서 제공하는 학술연구정보화시스템입니다. RISS에서는 각각 세분화된 전공 분야의 전문 지식과 최신 학술 연구 결과까지 열람할 수 있습니다.</p>
+                    </div>
                 </li>
-                <li>한국학술정보KISS
-                    <p><a class="website" href="https://kiss.kstudy.com/">한국학술정보KISS</a>는...</p>
+                <li><input type="checkbox" id="answer04">
+                    <label for="answer04">한국학술정보KISS</label>
+                    <div class="content">
+                        <p>한국학술정보KISS는...</p>
+                    </div>
                 </li>
-                <li>한국학술지인용색인KCI
-                    <p><a class="website" href="https://www.kci.go.kr/kciportal/main.kci">한국학술지인용색인KCI</a>는...</p>
+                <li><input type="checkbox" id="answer05">
+                    <label for="answer05">한국학술지인용색인KCI</label>
+                    <div class="content">
+                        <p>한국학술지인용색인KCI는 한국연구재단의 학술지평가를 통해 선정된 등재 및 등재후보 국내학술지와 게재논문에 대한 각종 정보를 제공하고 있습니다. 학술지 평가를 통해 선정된 우수 등재지, 등재지 및 등재 후보지 목록의 관리와 게재 논문에 대한 서지정보, 인용정보, 원문정보 및 인용분석 정보를 제공합니다.</p>
+                    </div>
                 </li>
-            </ol>
+            </ul>
         </main>
     </body>
 </html>

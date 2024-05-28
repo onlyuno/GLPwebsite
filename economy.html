@@ -6,38 +6,9 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
+    <script src="day_and_night.js"></script>
     <body>
-        <input type="button" value="night" onclick="
-        var target = document.querySelector('body');
-        var border = document.querySelector('nav');
-        if(this.value == 'night'){
-            target.style.backgroundColor='black';
-            target.style.color='white';
-            border.style.borderColor='white';
-            this.value='day';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i<alist.length){
-                console.log(alist[i]);
-                alist[i].style.color = 'white';
-                i = i + 1;
-            }
-        } else{
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            border.style.borderColor='black';
-            this.value = 'night';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i < alist.length){
-                console.log(alist[i]);
-                alist[i].style.color = 'black';
-                i = i + 1;
-            }
-        }
-        ">
+        <input id="day_night" type="button" value="night" onclick='day_and_night()'>
         <header class="main-title"><a href="index.html">You are looking for...</a></header>
         <nav id="nav_title">
             <div class="nav_letter">
@@ -55,32 +26,57 @@
         </nav>
         <main>
             <a class="main_title">Economy</a>
-            <ol>
-                <li>Kotra 해외시장뉴스
-                    <p><a class="website" href="https://dream.kotra.or.kr/kotranews/index.do">Kotra 해외시장뉴스</a>는...</p>
+            <ul class="accordion">
+                <li>
+                    <input type="checkbox" id="answer01">
+                    <label for="answer01">Kotra 해외시장뉴스</label>
+                    <div class="content">
+                        <p>Kotra 해외시장뉴스는...</p>
+                    </div>
                 </li>
-                <li>KIEP 대외경제정책연구원
-                    <p><a class="website" href="https://www.kiep.go.kr/">KIEP 대외경제정책연구원</a>은...</p>
+                <li><input type="checkbox" id="answer02">
+                    <label for="answer02">KIEP 대외경제정책연구원</label>
+                    <div class="content">
+                        <p>KIEP 대외경제정책연구원은...</p>
+                    </div>
                 </li>
-                <li>한국무역협회
-                    <p><a class="website" href="https://www.kita.net/">한국무역협회</a>는...</p>
+                <li><input type="checkbox" id="answer03">
+                    <label for="answer03">한국무역협회</label>
+                    <div class="content">
+                        <p>한국무역협회는...</p>
+                    </div>
                 </li>
-                <li>KDI 한국개발연구원
-                    <p><a class="website" href="https://www.kdi.re.kr/">KDI 한국개발연구원</a>은...</p>
+                <li><input type="checkbox" id="answer04">
+                    <label for="answer04">한국개발연구원</label>
+                    <div class="content">
+                        <p>한국개발연구원은...</p>
+                    </div>
                 </li>
-                <li>국제통화기금 IMF
-                    <p><a class="website" href="https://www.imf.org/en/Publications">국제통화기금 IMF</a>는...</p>
+                <li><input type="checkbox" id="answer05">
+                    <label for="answer05">국제통화기금 IMF</label>
+                    <div class="content">
+                        <p>국제통화기금 IMF는...</p>
+                    </div>
                 </li>
-                <li>국제금융센터
-                    <p><a class="website" href="https://www.kcif.or.kr/">국제금융센터</a>는...</p>
+                <li><input type="checkbox" id="answer06">
+                    <label for="answer06">국제금융센터</label>
+                    <div class="content">
+                        <p>국제금융센터는...</p>
+                    </div>
                 </li>
-                <li>한국은행 경제교육
-                    <p><a class="website" href="https://www.bok.or.kr/portal/main/main.do">한국은행 경제교육</a>은...</p>
+                <li><input type="checkbox" id="answer07">
+                    <label for="answer07">한국은행 경제교육</label>
+                    <div class="content">
+                        <p>한국은행 경제교육은...</p>
+                    </div>
                 </li>
-                <li>WTO
-                    <p><a class="website" href="https://www.wto.org/">WTO</a>는...</p>
+                <li><input type="checkbox" id="answer08">
+                    <label for="answer08">WTO</label>
+                    <div class="content">
+                        <p>WTO는...</p>
+                    </div>
                 </li>
-            </ol>
+            </ul>
         </main>
     </body>
 </html>

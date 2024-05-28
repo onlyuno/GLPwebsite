@@ -6,38 +6,9 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
+    <script src="day_and_night.js"></script>
     <body>
-        <input type="button" value="night" onclick="
-        var target = document.querySelector('body');
-        var border = document.querySelector('nav');
-        if(this.value == 'night'){
-            target.style.backgroundColor='black';
-            target.style.color='white';
-            border.style.borderColor='white';
-            this.value='day';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i<alist.length){
-                console.log(alist[i]);
-                alist[i].style.color = 'white';
-                i = i + 1;
-            }
-        } else{
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            border.style.borderColor='black';
-            this.value = 'night';
-
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i < alist.length){
-                console.log(alist[i]);
-                alist[i].style.color = 'black';
-                i = i + 1;
-            }
-        }
-        ">
+        <input id="day_night" type="button" value="night" onclick='day_and_night()'>
         <header class="main-title"><a href="index.html">You are looking for...</a></header>
         <nav id="nav_title">
             <div class="nav_letter">
@@ -55,26 +26,39 @@
         </nav>
         <main>
             <a class="main_title">Politics</a>
-            <ol>
-                <li>외교부
-                    <p><a class="website" href="https://www.mofa.go.kr/www/main.do">외교부</a>는...</p>
+            <ul class="accordion">
+                <li>
+                    <input type="checkbox" id="answer01">
+                    <label for="answer01">외교부</label>
+                    <div class="content">
+                        <p>외교부는...</p>
+                    </div>
                 </li>
-                <li>정책정보포털
-                    <p><a class="website" href="https://policy.nl.go.kr/">정책정보포털</a>은...</p>
+                <li><input type="checkbox" id="answer02">
+                    <label for="answer02">중앙선거관리위원회</label>
+                    <div class="content">
+                        <p>중앙선거관리위원회는...</p>
+                    </div>
                 </li>
-                <li>중앙선거관리위원회
-                    <p><a class="website" href="https://www.nec.go.kr/site/nec/main.do">중앙선거관리위원회</a>는...</p>
+                <li><input type="checkbox" id="answer03">
+                    <label for="answer03">한겨레</label>
+                    <div class="content">
+                        <p>한겨레는...</p>
+                    </div>
                 </li>
-                <li>한겨레
-                    <p><a class="website" href="https://www.hani.co.kr/arti/politics">한겨레</a>는...</p>
+                <li><input type="checkbox" id="answer04">
+                    <label for="answer04">조선일보</label>
+                    <div class="content">
+                        <p>조선일보는...</p>
+                    </div>
                 </li>
-                <li>조선일보
-                    <p><a class="website" href="https://www.chosun.com/politics/">조선일보</a>는...</p>
+                <li><input type="checkbox" id="answer05">
+                    <label for="answer05">한국일보</label>
+                    <div class="content">
+                        <p>한국일보는...</p>
+                    </div>
                 </li>
-                <li>한국일보
-                    <p><a class="website" href="https://www.hankookilbo.com/">한국일보</a>는...</p>
-                </li>
-            </ol>
+            </ul>
         </main>
     </body>
 </html>
