@@ -1,12 +1,15 @@
 function day_and_night(){
     var body = document.querySelector('body');
     var border = document.querySelector('nav');
-        if(document.querySelector('#day_night').value == 'night'){
+    var dayNight = document.querySelector('#day_night');
+        if(document.querySelector('#day_night').value == 'bright'){
             body.style.backgroundColor='black';
             body.style.color='white';
             border.style.borderColor='white';
             document.querySelector('.accordion').style.color='black';
-            document.querySelector('#day_night').value='day';
+            dayNight.value='dark';
+            dayNight.style.backgroundColor = 'white';
+            dayNight.style.color = 'black';
 
             var alist = document.querySelectorAll('a');
             var i = 0;
@@ -19,7 +22,9 @@ function day_and_night(){
             body.style.backgroundColor = 'white';
             body.style.color = 'black';
             border.style.borderColor='black';
-            document.querySelector('#day_night').value = 'night';
+            dayNight.value = 'bright';
+            dayNight.style.backgroundColor = 'black';
+            dayNight.style.color = 'white';
 
             var alist = document.querySelectorAll('a');
             var i = 0;

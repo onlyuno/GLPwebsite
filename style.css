@@ -2,10 +2,10 @@
     header a, .main_title{
         font-family:"Micro 5", sans-serif;
     }
-/*@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Micro+5&family=Rakkas&display=swap');
-    h1, header a{
-        font-family: "Chakra Petch", sans-serif;
-    }*/
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Gowun+Batang&display=swap');
+    div, label{
+        font-family: "Gowun Batang", serif;
+    }
 
 /*----header----*/
 header{
@@ -13,8 +13,7 @@ header{
     padding: 5vh;
 }
 header a{
-    font-size: 7vh;
-    font-size: 7vw;
+    font-size: 65px;
     text-decoration:none;
     color:black;
 }
@@ -43,7 +42,7 @@ header a{
 
 /*----main----*/
 main{
-    margin: 7vw 0 0 5vh;
+    margin: 30px 0 0 5vh;
     margin-top: 30px;
 }
 .main_title{
@@ -59,6 +58,7 @@ li{
 }
 /*padding:양옆, 위아래*/
 
+/*----accordion----*/
 .accordion li{
     list-style : none;
     width : 85%;
@@ -108,4 +108,24 @@ input[id*="answer"]:checked + label + .content{
 
 input[id*="answer"]:checked + label::before{
     content : '-';
+}
+
+/*----day_night_button---*/
+#day_night{
+    float : right;
+    border-radius: 40px;
+    border : none;
+    border-width: 1.5px;
+    background-color: black;
+    color : white;
+    padding : 5px 7px 5px 7px;
+}
+
+/*----link_button----*/
+.link{
+    background-size: 100%;
+    border : none;
+    border-radius: 3px;
+    width : 20px;
+    margin-left : 10px;
 }
