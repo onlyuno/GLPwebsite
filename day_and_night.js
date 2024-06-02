@@ -2,7 +2,8 @@ function day_and_night(){
     var body = document.querySelector('body');
     var border = document.querySelector('nav');
     var dayNight = document.querySelector('#day_night');
-        if(document.querySelector('#day_night').value == 'bright'){
+    
+        if(document.querySelector('#day_night').value == 'light'){
             body.style.backgroundColor='black';
             body.style.color='white';
             border.style.borderColor='white';
@@ -22,7 +23,7 @@ function day_and_night(){
             body.style.backgroundColor = 'white';
             body.style.color = 'black';
             border.style.borderColor='black';
-            dayNight.value = 'bright';
+            dayNight.value = 'light';
             dayNight.style.backgroundColor = 'black';
             dayNight.style.color = 'white';
 
