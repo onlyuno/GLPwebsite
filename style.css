@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
-    header a, .main_title{
+    header a, .main_title, .manual{
         font-family:"Micro 5", sans-serif;
     }
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Gowun+Batang&display=swap');
@@ -128,4 +128,22 @@ input[id*="answer"]:checked + label::before{
     border-radius: 3px;
     width : 20px;
     margin-left : 10px;
+}
+
+/*----video----*/
+.manual{
+    font-size : 45px;
+    display : flex;
+    justify-content: center;
+}
+
+video{
+    width : 600px;
+    height : 400px;
+}
+
+.video_container{
+    display : flex;
+    justify-content: center;
+    margin-bottom: 40px;
 }
